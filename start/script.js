@@ -216,7 +216,7 @@ console.log(attivi)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const utentiMagg = utenti.filter( u=> u.eta >= 18 && u.città === "Milano");
+const utentiMagg = utenti.filter(u => u.eta >= 18 && u.città === "Milano");
 
 console.log(utentiMagg);
 
@@ -227,12 +227,28 @@ console.log(utentiMagg);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const trovato = utenti.find(u => u.id === 4);
+
+console.log(trovato);
+
 /* ESERCIZIO 13 — reduce
    a) Usa reduce per calcolare l'età media (somma età / numero utenti). Stampa.
    b) Usa reduce per contare il numero di utenti attivi. Stampa.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const sommaEta = utenti.reduce((acc, utente) => acc + utente.eta, 0);
+console.log(sommaEta);
+
+const etaMedia = sommaEta / utenti.length
+console.log(etaMedia);
+
+const utentiAttivi = attivi.reduce((acc, utente) => acc + 1, 0);
+console.log(utentiAttivi);
+
+
+// const active
 
 /* ESERCIZIO 14 — sort
    a) Ordina gli utenti per eta crescente. Stampa l'array di nomi nell'ordine.
