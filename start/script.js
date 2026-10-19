@@ -257,6 +257,13 @@ console.log(utentiAttivi);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+//14 a
+const crescente = utenti.sort((a, b) => a.eta - b.eta);
+console.log(crescente);
+
+//14b
+const alphabetical = utenti.sort((a, b) => a.nome + b.nome);
+console.log(alphabetical);
 /* ESERCIZIO 15 — Chaining
    Componi una catena di metodi che:
    - filtra gli utenti attivi
