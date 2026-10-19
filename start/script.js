@@ -194,7 +194,7 @@ console.log(nomiCompleti);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const utentiPlus = utenti.map(u => ({ u, dezcrizione: `${u.nome} ${u.cognome}, ${u.città}` }));
+const utentiPlus = utenti.map(u => ({u, dezcrizione: `${u.nome} ${u.cognome}, ${u.città}` }));
 
 console.log(utentiPlus[0])
 
@@ -244,9 +244,11 @@ console.log(sommaEta);
 const etaMedia = sommaEta / utenti.length
 console.log(etaMedia);
 
-const utentiAttivi = attivi.reduce((acc, utente) => acc + 1, 0);
-console.log(utentiAttivi);
+ const utentiAttivi = attivi.reduce((acc, utente) => acc + 1, 0);
+ console.log(utentiAttivi);
 
+// const n = utenti.reduce((acc, u) => acc + u.attivo, 0)
+//  console.log(n)
 
 // const active
 
@@ -262,8 +264,14 @@ const crescente = utenti.sort((a, b) => a.eta - b.eta);
 console.log(crescente);
 
 //14b
-const alphabetical = utenti.sort((a, b) => a.nome + b.nome);
+const alphabetical = utenti.sort((a, b) => a.nome.localeCompare(b.nome))
 console.log(alphabetical);
+// 	if (condition) {
+		
+// 	});
+// console.log(alphabetical);
+
+
 /* ESERCIZIO 15 — Chaining
    Componi una catena di metodi che:
    - filtra gli utenti attivi
@@ -273,3 +281,5 @@ console.log(alphabetical);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
